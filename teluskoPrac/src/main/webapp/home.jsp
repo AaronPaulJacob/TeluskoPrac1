@@ -8,8 +8,10 @@
     <title>My API Page</title>
 </head>
 <body>
-
+<h1>This the Frontend Page</h1>
+It is being served on the link: localhost:8080/home</h1>
+<h3>Welcome to my page being rendered at /home</h3>
 </body>
 </html>
 
-localhost:8080/home
+
