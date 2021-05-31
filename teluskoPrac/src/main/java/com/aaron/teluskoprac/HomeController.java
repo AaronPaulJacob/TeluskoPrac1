@@ -4,19 +4,39 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-@Controller   // for rest services use @ RestController
+@Controller   // for rest services use @RestController
 public class HomeController {
+
+    // Accepting data and retrieving it in a Object from the client side
     @RequestMapping("home")
-    public ModelAndView home(String name,Integer age)
+    public ModelAndView home(Alien alien)
     {   ModelAndView mv = new ModelAndView();
-        mv.addObject("name",name);
-        mv.addObject("age",age);
+        mv.addObject("obj",alien);
         mv.setViewName("home.jsp");
-        return mv; // If @ResponseBody is commented out then it will search for home.jsp file in webapp folder
+        return mv;
     }
 }
 
+
+
+
+
+
 // ========================================= BASIC REQUEST HANDLING ===================================================
+
+// ============================== Version 5 =====================================
+//@RequestMapping("home")
+//// Important Note: If RequestParam is mentioned and a parameter is not present then it will give error
+////                  Extra parameters given then no problem but requested parameters must be present
+//// However if simple parameter is given without the @RequestParam then it will not give error
+//public ModelAndView home(@RequestParam("name") String name,@RequestParam("age") Integer age)
+//{   ModelAndView mv = new ModelAndView();
+//    mv.addObject("name",name);
+//    mv.addObject("age",age);
+//    mv.setViewName("home.jsp");
+//    return mv; // If @ResponseBody is commented out then it will search for home.jsp file in webapp folder
+//}
+
 
 // ============================== Version 4 =====================================
 // Model and View

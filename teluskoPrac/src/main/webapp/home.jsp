@@ -9,8 +9,12 @@
 </head>
 <body>
 <h1>This the Frontend Page</h1>
-It is being served on the link: localhost:8080/home</h1>
-<h3>The data that you have entered is Name:${name} and Age:${age}</h3>
+<h1>It is being served on the link: localhost:8080/home</h1>
+<h3>The data is being extracted directly in form of object</br>
+        Name:${obj.aname} </br>
+        Id:${obj.aid}    </br>
+        Language:${obj.lang}
+</h3>
 </body>
 </html>
 
